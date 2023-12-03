@@ -6,6 +6,9 @@ struct CountsBySoH {
   int exchange;
   int failed;
 };
+float calculate SoH(int presentCapacity, int ratedCapacity){
+  return 100.0*presentCapacity/ratedCapacity;
+}
 
 struct CountsBySoH countBatteriesByHealth(const int* presentCapacities, int nBatteries) {
   struct CountsBySoH counts = {0, 0, 0};
